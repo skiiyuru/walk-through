@@ -9,7 +9,7 @@
 ## To Do
 
 [x] Set up three.js and react-three-fibre
-[ ] Setup basic scene + leva for debug
+[x] Setup basic scene + leva for debug
 [ ] Character movement: Keyboard + Joystick or Point to click?
 [ ] Add house model
 [ ] Add Physics
