@@ -1,5 +1,8 @@
-import { OrbitControls } from "@react-three/drei"
+import { Environment, Sky } from "@react-three/drei"
+import { Physics } from "@react-three/rapier"
 import { Perf } from "r3f-perf"
+import FirstPersonController from "./FirstPersonController"
+import Ground from "./Ground"
 
 export default function Experience() {
   return (
@@ -7,24 +10,17 @@ export default function Experience() {
       {/* utilities */}
       <Perf position="top-left" />
 
-      <OrbitControls makeDefault />
-
       {/* env & lights */}
-      <color args={["skyblue"]} attach={"background"} />
+      <Sky sunPosition={[100, 20, 100]} />
       <ambientLight intensity={1} />
-      <directionalLight position={[10, 10, 10]} intensity={2} />
+      <Environment preset="city" />
 
       {/* scene */}
-      <mesh>
-        <torusKnotGeometry />
-        <meshPhysicalMaterial
-          roughness={0}
-          clearcoat={1}
-          clearcoatRoughness={0}
-          color="tomato"
-          flatShading
-        />
-      </mesh>
+      <Physics>
+        <Ground />
+
+        <FirstPersonController />
+      </Physics>
     </>
   )
 }
