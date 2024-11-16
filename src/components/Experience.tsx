@@ -1,6 +1,7 @@
-import { Environment, Sky } from "@react-three/drei"
+import { Environment } from "@react-three/drei"
 import { Physics } from "@react-three/rapier"
 import { Perf } from "r3f-perf"
+import Building from "./Building"
 import FirstPersonController from "./FirstPersonController"
 import Ground from "./Ground"
 
@@ -11,15 +12,13 @@ export default function Experience() {
       <Perf position="top-left" />
 
       {/* env & lights */}
-      <Sky sunPosition={[100, 20, 100]} />
-      <ambientLight intensity={1} />
       <Environment preset="city" />
 
       {/* scene */}
       <Physics>
         <Ground />
-
         <FirstPersonController />
+        <Building />
       </Physics>
     </>
   )
