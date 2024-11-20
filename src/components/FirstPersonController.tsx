@@ -17,7 +17,7 @@ export default function FirstPersonController() {
     <KeyboardControls map={buttonsMap}>
       <Ecctrl
         camCollision={false}
-        camInitDis={-0.01} // camera intial position
+        camInitDis={-0.01} // camera initial position
         camMinDis={-0.01}
         camFollowMult={1000}
         camLerpMult={1000}
