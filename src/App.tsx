@@ -40,7 +40,7 @@ export default function App() {
             background: "skyblue",
           }}
           shadows
-          camera={{ fov: 45 }}
+          camera={{ fov: 75 }}
           onPointerDown={(e) => e.target.requestPointerLock()}
         >
           <Suspense fallback={<Loader />}>
