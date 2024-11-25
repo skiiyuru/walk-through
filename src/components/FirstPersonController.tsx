@@ -24,7 +24,7 @@ export default function FirstPersonController() {
         turnVelMultiplier={1}
         turnSpeed={100}
         mode="CameraBasedMovement"
-        maxVelLimit={4}
+        maxVelLimit={2}
       >
         {/* Make the box invisible */}
         <mesh scale={0.5}>
