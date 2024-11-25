@@ -1,14 +1,23 @@
-// House interior by Gabriele Romagnoli [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/AQQ2g0YE2D)
+/* 
+OPTIMIZATION:
+
+- https://optimizeglb.com/dashboard (credits required)
+
+*/
 
 import { useGLTF } from "@react-three/drei"
 import { RigidBody } from "@react-three/rapier"
 
+const PATH = "/models/tatu-city-house-v2.glb"
+
 export default function Building() {
-  const model = useGLTF("/models/interior.glb")
+  const model = useGLTF(PATH)
 
   return (
-    <RigidBody type="fixed" position={[0, 2.5, 20]} colliders="trimesh">
-      <primitive object={model.scene} scale={3} rotation-y={Math.PI} />
+    <RigidBody type="fixed" position={[0, 0.3, 50]} colliders="trimesh">
+      <primitive object={model.scene} />
     </RigidBody>
   )
 }
+
+useGLTF.preload(PATH)

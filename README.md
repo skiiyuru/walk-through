@@ -8,9 +8,12 @@
 
 ## To Do
 
-[x] Set up three.js and react-three-fibre
-[x] Setup basic scene + leva for debug
-[x] Character movement: Keyboard + Joystick
-[x] Add house model
-[x] Add Physics
-[ ] Test
+- [x] Set up three.js and react-three-fibre
+- [x] Setup basic scene + leva for debug
+- [x] Character movement: Keyboard (for computers) & Joystick (for mobile)
+- [x] Add simple house model
+- [x] Add Physics
+- [x] Test
+- [x] Replace model with client model (Thanks to Lawrence Biwott)
+- [x] Gather user feedback:
+  - [x] Reduce movement speed
